@@ -5,10 +5,12 @@ import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.smapledemo.BR
+import com.example.smapledemo.BR.viewModel
 import com.example.smapledemo.Interface.LoginResultCallBack
 import com.example.smapledemo.R
-import com.example.smapledemo.ViewModel.LoginViewModel
-import com.example.smapledemo.ViewModel.LoginViewModelFactory
+import com.example.smapledemo.viewModel.LoginViewModel
+import com.example.smapledemo.viewModel.LoginViewModelFactory
 import com.example.smapledemo.databinding.ActivityMainBinding
 import es.dmoral.toasty.Toasty
 
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity(),LoginResultCallBack {
        activityMainBinding.viewModel = ViewModelProviders.of(this,LoginViewModelFactory(this))
            .get(LoginViewModel::class.java)
 
-//        binding.setVariable(BR.viewModel, viewModel)
+//        activityMainBinding.setVariable(BR.viewModel, viewModel)
     }
 
 }

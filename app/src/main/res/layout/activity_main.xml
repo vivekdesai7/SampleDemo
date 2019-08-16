@@ -5,7 +5,7 @@
         >
     <data>
         <variable name="viewModel"
-                  type="com.example.smapledemo.ViewModel.LoginViewModel"></variable>
+                  type="com.example.smapledemo.viewModel.LoginViewModel"></variable>
     </data>
     
     

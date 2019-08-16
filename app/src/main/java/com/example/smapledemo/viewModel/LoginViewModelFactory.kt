@@ -1,4 +1,4 @@
-package com.example.smapledemo.ViewModel
+package com.example.smapledemo.viewModel
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider

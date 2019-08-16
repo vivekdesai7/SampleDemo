@@ -38,7 +38,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //config data binding compiler with kotlin
- //   kapt 'com.android.databinding:compiler:3.3.2'
+//    kapt 'com.android.databinding:compiler:3.3.2'
 
     //LifeCycle Extensions
     implementation 'android.arch.lifecycle:extensions:1.1.1'
