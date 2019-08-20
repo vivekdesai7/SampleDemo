@@ -23,10 +23,11 @@
             
             <EditText
                  android:id="@+id/edt_email"
-                 android:hint="Email"
+                 android:hint="User Name"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:padding="8dp"
+                 android:inputType="text"
                  app:addTextChangedListener="@{viewModel.emailTextWatcher}"
             />
 
@@ -36,6 +37,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
+                    android:inputType="textPassword"
+                    android:password="true"
                     app:addTextChangedListener="@{viewModel.passwordTextWatcher}"
             />
             
@@ -43,7 +46,7 @@
                     android:id="@+id/btn_login"
                     android:text="LOGIN"
                     style = "@style/Base.Widget.AppCompat.Button.Colored"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="@{viewModel::onLoginClicked}"
             />

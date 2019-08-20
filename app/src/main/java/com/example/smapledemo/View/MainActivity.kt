@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(),LoginResultCallBack {
        activityMainBinding.viewModel = ViewModelProviders.of(this,LoginViewModelFactory(this))
            .get(LoginViewModel::class.java)
 
-//        activityMainBinding.setVariable(BR.viewModel, viewModel)
+
     }
 
 }
