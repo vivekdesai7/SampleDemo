@@ -7,7 +7,10 @@ import android.util.Base64
 import android.util.Log
 import android.view.View
 import com.example.smapledemo.Interface.LoginResultCallBack
+import com.example.smapledemo.Model.NewUser
 import com.example.smapledemo.Model.User
+import com.example.smapledemo.Model.UserList
+import com.example.smapledemo.MyService.RetrofitClientInstance
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
@@ -58,6 +61,7 @@ class LoginViewModel (private val listener: LoginResultCallBack):ViewModel(){
 
     //Create function to process login button onclick
     fun onLoginClicked(v: View){
+
         if(user.isDataValid) {
 
             val usr = user.getEmail();
@@ -68,7 +72,7 @@ class LoginViewModel (private val listener: LoginResultCallBack):ViewModel(){
 
             RetrofitClientInstance.instance.legsCount(auth).enqueue(object : Callback<ResponseBody> {
                 override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                    Log.e("onFailure", "onFailure")
+                    Log.e("onFailure", "onFailure"+t.message)
                     listener.onError("Server error")
                 }
 
@@ -84,6 +88,7 @@ class LoginViewModel (private val listener: LoginResultCallBack):ViewModel(){
                 }
 
             })
+
         }
     }
 

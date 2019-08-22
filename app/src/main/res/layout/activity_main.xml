@@ -39,8 +39,7 @@
                     android:padding="8dp"
                     android:inputType="textPassword"
                     android:password="true"
-                    app:addTextChangedListener="@{viewModel.passwordTextWatcher}"
-            />
+                    app:addTextChangedListener="@{viewModel.passwordTextWatcher}"/>
             
             <Button
                     android:id="@+id/btn_login"

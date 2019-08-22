@@ -1,4 +1,5 @@
-import com.example.smapledemo.MyService.LoginService
+package com.example.smapledemo.MyService
+
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -32,4 +33,6 @@ object RetrofitClientInstance {
 
         retrofit.create(LoginService::class.java)
     }
+
+
 }

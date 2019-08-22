@@ -1,6 +1,7 @@
 package com.example.smapledemo.View
 
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -16,6 +17,8 @@ import es.dmoral.toasty.Toasty
 
 class MainActivity : AppCompatActivity(),LoginResultCallBack {
     override fun onSuccess(message: String) {
+        val intent = Intent(this@MainActivity,UserActivity::class.java)
+        startActivity(intent)
         Toasty.success(this, message, Toast.LENGTH_SHORT).show()
     }
 
